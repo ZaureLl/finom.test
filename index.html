@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finom</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo-F.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo-wrapper">
+                <a href="/">
+                    <img src="./images/logo.svg" alt="Finom">
+                </a>
+            </div>
+            <div class="header__menu-wrapper">
+                <button id="burgerMenu" class="header__menu-toggler togler"></button>
+                <nav class="header__menu-bank">
+                    <a href="/" class="bank-menu__link">Money</a>
+                    <a href="/" class="bank-menu__link">Team</a>
+                    <a href="/" class="bank-menu__link">Cards</a>
+                    <a href="/" class="bank-menu__link">Help center</a>
+                    <a href="/" class="bank-menu__link icon">Invite your parthers</a>
+                </nav>
+                <div class="actions__btn-wrapper">
+                    <a href="/" class="upgrade-btn">
+                        Upgrade plan
+                    </a>
+                </div>
+            </div>
+            <div class="header__actions-wrapper">
+                <div id="selectedCompany" class="company-dropdown">
+                    <div class="company-dropdown__selected-comp">
+                        <div id="selectCompanyInit" class="company-dropdown__init togler">
+                            T
+                        </div>
+                        <div id="selectCompanyName" class="company-dropdown__name">
+                            TESLA S.R.L.
+                        </div>
+                        <div class="company-dropdown__chevron"></div>
+                    </div>
+                    <div class="company-dropdown__content">
+                        <ul id="companyList" class="company-dropdown__list">
+                            <li class="company-dropdown__item" onclick="selectCompany('TESLA S.R.L.')">TESLA S.R.L.
+                            </li>
+                            <li class="company-dropdown__item" onclick="selectCompany('Google')">Google</li>
+                            <li class="company-dropdown__item" onclick="selectCompany('Microsoft')">Microsoft</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="setting-tabs">
+                        <h3>Personal</h3>
+                        <ul>
+                            <li id="profile" class="setting-tabs__item"><a href="/">Profile</a></li>
+                            <li id="security" class="setting-tabs__item"><a href="/">Security</a></li>
+                            <li id="notifications" class="setting-tabs__item"><a href="/">Notifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="setting-tabs">
+                        <h3 class="setting-tabs__header-company">Tesla s.r.L.</h3>
+                        <ul>
+                            <li id="businessProfile" class="setting-tabs__item"><a href="/">Business profile</a></li>
+                            <li id="eInvocing" class="setting-tabs__item"><a href="/">E-invoicing</a></li>
+                            <li id="planAndLimits" class="setting-tabs__item active"><a href="/">Plan and limits</a>
+                            </li>
+                            <li id="team" class="setting-tabs__item"><a href="/">Team</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="invocing" class="content">
+                <div class="invocing card">
+                    <div class="invocing-inner">
+                        <div class="invocing-inner__header">
+                            <h1>
+                                Invoicing Start
+                            </h1>
+                            <a href="/">Change plan</a>
+                        </div>
+                        <div class="invocing__price">6,99 &euro; <span>/mo</span></div>
+                        <div class="invocing__biiling-details">
+                            <p>
+                                We &#39;ll charge 6,99 &euro; on <time datetime="2020-07-24">Jul &nbsp; 24, 2020</time>
+                            </p>
+                            <a href="/">
+                                Change card &#42; &#42; &#42; 5423 or billing info
+                            </a>
+                        </div>
+                        <div class="invocing__uppgrade">
+                            <button class="btn invocing__uppgrade-btn">Switch to annual plan</button>
+                            <p>and save 24,00 &euro; a year</p>
+                        </div>
+                    </div>
+                    <div class="invocing__new-feature">
+                        <h2>Explore new features</h2>
+                        <div class="invocing__premium-wrapper">
+                            <div class="premium__about about-column">
+                                <h3>Invoicing Premium</h3>
+                                <div class="premium__about-description">
+                                    <p>Unlimited outgoing e-invoices</p>
+                                    <p>Unlimited connected banks</p>
+                                    <p>10 users</p>
+                                    <p>Expense management</p>
+                                </div>
+                            </div>
+
+                            <div class="premium__payment about-column">
+                                <button class="premium__close-btn"></button>
+                                <p class="premium__payment-price">&euro;20.99 /mo</p>
+                                <p class="premium__payment-billed">billed annually or 24.99 &euro;
+                                    billed monthly</p>
+                                <button class="premium__upgrade-btn btn">Upgrade</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics-wrapper">
+                    <div class="statistics card">
+                        <div class="statistics__tabs">
+                            <div class="statistics__tab-item" id="limits" onclick="openTab('limits')">
+                                Limits
+                            </div>
+                            <div class="statistics__tab-item" id="invoices" onclick="openTab('invoices')">Invoices</div>
+                        </div>
+                        <div class="statistics__tab-content" id="tabContent_limits">
+                            <div class="tab-content__limits-content">
+                                <div class="limits__item">
+                                    <div class="limits__quantity">
+                                        <p class="limits__title">Team members</p>
+                                        <p class="limits__quantity">3&nbsp;<span>/ 6</span></p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress-bar"></div>
+                                    </div>
+
+                                    <div class="limits__upgr-link">
+                                        <p>Need more members? <a href="/">Upgrade your plan</a></p>
+                                    </div>
+                                </div>
+                                <div class="limits__item">
+                                    <div class="limits__quantity">
+                                        <p class="limits__title">Outgoing e-invoices</p>
+                                        <p class="limits__quantity"><span>Unlimited</span></p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress-bar limit_max-width"></div>
+                                    </div>
+
+                                    <div class="limits__upgr-link">
+                                        <p>Send as many e-invoices as you want</p>
+                                    </div>
+                                </div>
+                                <div class="limits__item e-invoices">
+                                    <div class="limits__quantity">
+                                        <p class="limits__title">Connected sources (banks)</p>
+                                        <p class="limits__quantity">5&nbsp;<span>/ 5</span></p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress-bar limit_max-width limit_red"></div>
+                                    </div>
+
+                                    <div class="limits__upgr-link">
+                                        <p>Need more banks to connect? <a href="/">Upgrade your plan</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="statistics__tab-content" id="tabContent_invoices">Invoices Content Here</div>
+                    </div>
+                </div>
+            </div>
+            <div id="empty-element" class="content content_closed">
+                <div class="card">
+                    <h1>Not Found</h1>
+                </div>
+            </div>
+        </div>
+        <button class="chat-btn"></button>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src='./index.js'></script>
+</body>
+
+</html>
